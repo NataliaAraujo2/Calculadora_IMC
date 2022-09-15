@@ -5,7 +5,7 @@ function imc() {
   const height = document.getElementById("height").value;
   const weight = document.getElementById("weight").value;
   const result = document.getElementById("result");
-  }
+  
 
   if (name !== "" && height !== "" && weight !== "") {
     const valorIMC = (weight / (height * height)).toFixed(1);
@@ -23,13 +23,12 @@ function imc() {
     } else if (valorIMC < 40) {
       classificacao = "com obesidade grau II.";
     } else {
-    classificacao = "com obesidade grau III. Cuidado!!";
+      classificacao = "com obesidade grau III. Cuidado!!";
     }
     result.textContent=`${name} Seu IMC é ${valorIMC}! E você está ${classificacao}`;
   } else {
     result.textContent = "Preencha todos os campos!"
   }
-  
+}
 
-
-calcular.addEventListener ("click",imc)
+calcular.addEventListener("click",imc)
